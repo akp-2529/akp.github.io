@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profile card</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <!-- <script src="JS/index.js"></script> -->
+    <script
+      src="https://kit.fontawesome.com/b83d6d00f1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="main center">
+      <div class="box center">
+        <img src="IMAGES/profilepic.png" alt="" />
+        <div>
+          <p class="user_name">a.k.p</p>
+          <p class="skill">code ethusiast</p>
+        </div>
+        <div class="arr_container center">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+        <div class="left_container off">
+          <p>Skills</p>
+          <div class="skills">
+            <div>C++ </div>
+            <div>Java </div>
+            <div>GitHub </div>
+            <div>Html </div>
+            <div>Css </div>
+          </div>
+          <div class="icons">
+            <i> <a href="https://github.com/akp-2529" target="_blank" class="fab fa-github"></a> </i>
+            <i> <a href="https://www.instagram.com/a.k.p/" target="_blank" class="fab fa-instagram"></a></i>
+            <i> <a href="https://twitter.com/iem_akp" target="_blank" class="fab fa-twitter"></a></i>
+            <i> <a href="https://www.linkedin.com/in/ajaya-kumar-patnaik-a38a491a8/" target="_blank" class="fab fa-linkedin"></a></i>
+          </div>
+          <div class="cancel center">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const clc = document.querySelector(".cancel");
+      const arr = document.querySelector(".arr_container");
+      const left_container = document.querySelector(".left_container");
+
+      arr.addEventListener("click", () => {
+        arr.classList.add("active_arr");
+        if(left_container.classList.contains("off")) {
+          left_container.classList.remove("off");
+          left_container.classList.add("active");
+        }
+      });
+
+      clc.addEventListener("click", () => {
+        arr.classList.remove("active_arr");
+        if(left_container.classList.contains("active")) {
+          left_container.classList.remove("active");
+          left_container.classList.add("off");
+        }
+      });
+    </script>
+  </body>
+</html>
